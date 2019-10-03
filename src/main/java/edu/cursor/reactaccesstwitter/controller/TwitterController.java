@@ -26,7 +26,7 @@ public class TwitterController {
         ConnectableFlux<Status> flux = TwitterService.getTwitterStream();
 
         return flux
-                .filter(status -> status.getText().contains("the"))
+                .filter(status -> status.getText().contains("ipreferespresso"))
                 .map(Status::getText);
     }
 
